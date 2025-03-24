@@ -1,0 +1,423 @@
+====================== 0 ======================
+=== /home/sunyujia/python_ws/OpenEMMA/test_data/under_construction/1725330479040278000.png ===
+### Step-by-Step Analysis of the Driving Scene:
+
+#### Step 1: Intersection Scene
+- **Observation**: The video does not show any intersections where the car would need to stop.
+- **Conclusion**: There is no intersection scene in the video.
+
+#### Step 2: Sudden Arrival of Other Cars
+- **Observation**: No other cars suddenly enter the road from the side or ahead.
+- **Conclusion**: There are no sudden arrivals of other cars.
+
+#### Step 3: Tunnel Entry/Exit
+- **Observation**: The video does not show the car entering or exiting a tunnel.
+- **Conclusion**: The car does not drive into or leave a tunnel.
+
+#### Step 4: Turn in the Road
+- **Observation**: The car appears to be driving straight on a multi-lane road with no visible turns.
+- **Conclusion**: The car does not show a turn in the road.
+
+#### Step 5: Construction in the Road
+- **Observation**: There are no visible signs of construction, such as barriers, detours, or workers, on the road.
+- **Conclusion**: There is no construction in the road.
+
+### Summary:
+- **No intersections** were encountered.
+- **No sudden arrivals** of other cars were observed.
+- **No tunnel entry/exit** was seen.
+- **No turns** were made.
+- **No construction** was present on the road.
+
+The driving scene is smooth and consistent with a straight path on a multi-lane road.
+====================== 1 ======================
+=== /home/sunyujia/python_ws/OpenEMMA/test_data/under_construction/1725330481038882000.png ===
+### Step-by-Step Analysis of the Driving Scene:
+
+#### Step 1: Intersection Scene
+- **Observation**: There is no visible intersection in this video segment.
+- **Car Movement**: The car appears to be moving along a straight road without stopping at any intersections.
+
+#### Step 2: Sudden Car Entry
+- **Observation**: No sudden car entries are observed on the road ahead.
+- **Car Movement**: The car maintains a steady speed and lane position throughout the video.
+
+#### Step 3: Tunnel Entry/Exit
+- **Observation**: There are no tunnels visible in the video.
+- **Car Movement**: The car continues on a straight road with no indication of entering or exiting a tunnel.
+
+#### Step 4: Turn in the Road
+- **Observation**: The car does not make any turns; it remains on a straight path.
+- **Car Movement**: The car stays in its lane without changing direction.
+
+#### Step 5: Construction in the Road
+- **Observation**: There is no construction activity visible on the road.
+- **Car Movement**: The road appears clear, with no signs of ongoing construction work.
+
+### Summary:
+- **Intersection**: No intersection seen.
+- **Sudden Car Entry**: No sudden car entries observed.
+- **Tunnel**: No tunnel entry or exit noted.
+- **Turn**: The car does not make any turns.
+- **Construction**: No construction activity detected on the road.
+====================== 2 ======================
+=== /home/sunyujia/python_ws/OpenEMMA/test_data/under_construction/1725330483037254000.png ===
+### Step-by-Step Analysis of the Driving Scene:
+
+#### Step 1: Intersection Scene
+- **Observation**: The video does not show any intersections where the car would need to stop.
+- **Conclusion**: There is no intersection scene in the video.
+
+#### Step 2: Sudden Arrival of Other Cars
+- **Observation**: No other cars suddenly enter the road from the side or behind.
+- **Conclusion**: There are no sudden arrivals of other cars.
+
+#### Step 3: Tunnel Entry/Exit
+- **Observation**: The video does not show the car entering or exiting a tunnel.
+- **Conclusion**: The car does not drive into or leave a tunnel.
+
+#### Step 4: Turn in the Road
+- **Observation**: The car appears to be driving straight on a multi-lane road with no visible turns.
+- **Conclusion**: The car does not show a turn in the road.
+
+#### Step 5: Construction in the Road
+- **Observation**: There are no visible signs of construction, such as barriers, detours, or warning signs, on the road.
+- **Conclusion**: There is no construction in the road.
+
+### Summary:
+- **No intersections** were encountered.
+- **No sudden arrivals** of other cars were observed.
+- **No tunnel entry/exit** was seen.
+- **No turns** were made by the car.
+- **No construction** was present on the road.
+
+The driving scene is smooth and consistent with a straight path on a multi-lane road.
+====================== 3 ======================
+=== /home/sunyujia/python_ws/OpenEMMA/test_data/under_construction/1725330485035882000.png ===
+### Step-by-Step Analysis of the Driving Scene:
+
+#### Step 1: Intersection Scene
+- **Observation**: There is no visible intersection in this video segment.
+- **Car Movement**: The car continues straight on a multi-lane road without stopping at any intersections.
+
+#### Step 2: Sudden Car Entry
+- **Observation**: No other cars enter the road suddenly from the side or behind.
+- **Car Movement**: The car maintains a steady speed and lane position throughout the video.
+
+#### Step 3: Tunnel Entry/Exit
+- **Observation**: The road does not appear to be a tunnel; it is an open road with trees lining both sides.
+- **Car Movement**: The car continues on a straight path without entering or exiting a tunnel.
+
+#### Step 4: Turn in the Road
+- **Observation**: The road appears to be a straight stretch with no visible curves or turns.
+- **Car Movement**: The car remains in its lane and does not make any turns.
+
+#### Step 5: Construction
+- **Observation**: There is no construction visible on the road. The surroundings include trees and grassy areas, but no signs of ongoing construction work.
+- **Car Movement**: The road is clear, and there are no obstacles or signs indicating construction.
+
+### Summary:
+- **Intersection**: No intersection encountered.
+- **Sudden Car Entry**: No sudden car entries observed.
+- **Tunnel**: No tunnel entry or exit noted.
+- **Turn**: No turns made by the car.
+- **Construction**: No construction activity visible on the road.
+
+The car is driving smoothly on a straight road with no interruptions or changes in direction.
+====================== 4 ======================
+=== /home/sunyujia/python_ws/OpenEMMA/test_data/under_construction/1725330487034881000.png ===
+### Step-by-Step Analysis of the Driving Scene:
+
+#### Step 1: Intersection Scene
+- **Observation**: The video does not show any intersections where the car would need to stop.
+- **Conclusion**: There is no intersection scene in the video.
+
+#### Step 2: Sudden Arrival of Other Cars
+- **Observation**: No other cars suddenly enter the road from the side or ahead.
+- **Conclusion**: There are no sudden arrivals of other cars.
+
+#### Step 3: Tunnel Entry/Exit
+- **Observation**: The video shows a road with lane markings but no visible tunnel entrance or exit.
+- **Conclusion**: The car does not enter or leave a tunnel.
+
+#### Step 4: Turn in the Road
+- **Observation**: The road appears straight without any visible turns.
+- **Conclusion**: The car does not make a turn in the road.
+
+#### Step 5: Construction on the Road
+- **Observation**: There are no visible signs of construction on the road. The road appears clear and well-maintained.
+- **Conclusion**: There is no construction on the road.
+
+### Summary:
+- **No intersections** were encountered.
+- **No sudden arrivals** of other cars were observed.
+- The car did not enter or leave a tunnel.
+- There was no turn in the road.
+- There was no construction on the road.
+
+The driving scene is straightforward with a clear road and no significant events occurring.
+====================== 5 ======================
+=== /home/sunyujia/python_ws/OpenEMMA/test_data/under_construction/1725330489033614000.png ===
+### Step-by-Step Analysis of the Driving Scene:
+
+#### Step 1: Intersection Scene
+- **Observation**: The video does not show any intersections where the car would need to stop.
+- **Conclusion**: There is no intersection scene in the video.
+
+#### Step 2: Sudden Arrival of Other Cars
+- **Observation**: No other cars suddenly enter the road from the side or ahead.
+- **Conclusion**: There are no sudden arrivals of other cars.
+
+#### Step 3: Tunnel Entry/Exit
+- **Observation**: The video does not show the car entering or exiting a tunnel.
+- **Conclusion**: The car does not drive into or leave a tunnel.
+
+#### Step 4: Turn in the Road
+- **Observation**: The car appears to be traveling straight on a multi-lane highway with no visible signs of turning.
+- **Conclusion**: The car does not show a turn in the road.
+
+#### Step 5: Construction in the Road
+- **Observation**: There are no visible signs of construction, such as barriers, detours, or warning signs, on the road.
+- **Conclusion**: There is no construction in the road.
+
+### Summary:
+- **No intersections** were encountered.
+- **No sudden arrivals** of other cars were observed.
+- **No tunnel entry/exit** was seen.
+- **No turns** were made.
+- **No construction** was present on the road.
+
+The video shows a smooth, straight journey on a multi-lane highway.
+====================== 6 ======================
+=== /home/sunyujia/python_ws/OpenEMMA/test_data/under_construction/1725330491032265000.png ===
+### Step-by-Step Analysis of the Driving Scene:
+
+#### Step 1: Intersection Scene
+- **Observation**: There is no visible intersection in this video segment.
+- **Car Movement**: The car continues straight on the road without stopping.
+
+#### Step 2: Sudden Car Entry
+- **Observation**: No other cars enter the road suddenly from the side or behind.
+- **Conclusion**: There is no sudden car entry into the road.
+
+#### Step 3: Tunnel Entry/Exit
+- **Observation**: The car does not appear to be entering or exiting a tunnel.
+- **Conclusion**: The car is not in a tunnel.
+
+#### Step 4: Turn in the Road
+- **Observation**: The car maintains a straight path with no indication of turning.
+- **Conclusion**: The car is not making a turn at this moment.
+
+#### Step 5: Construction in the Road
+- **Observation**: There is no visible construction activity or roadwork in the video frame.
+- **Conclusion**: There is no construction in the road.
+
+### Summary:
+- **Intersection**: No intersection seen.
+- **Sudden Car Entry**: No sudden car entries observed.
+- **Tunnel**: No tunnel entry or exit noted.
+- **Turn**: The car is maintaining a straight path.
+- **Construction**: No construction activity detected.
+
+The video shows a smooth, continuous straight drive on a clear road.
+====================== 7 ======================
+=== /home/sunyujia/python_ws/OpenEMMA/test_data/under_construction/1725330493030851000.png ===
+### Step-by-Step Analysis of the Driving Scene:
+
+#### Step 1: Intersection Scene
+- **Observation**: There is no visible intersection in this video segment.
+- **Car Movement**: The car continues straight on a multi-lane road.
+
+#### Step 2: Sudden Car Entry
+- **Observation**: No other cars enter the road suddenly from the side or behind.
+- **Conclusion**: The car maintains a steady speed without any sudden interruptions.
+
+#### Step 3: Tunnel Entry/Exit
+- **Observation**: The car does not enter or exit a tunnel in this segment.
+- **Conclusion**: The car remains on an open road.
+
+#### Step 4: Turn in the Road
+- **Observation**: The car appears to be driving straight ahead with no indication of turning.
+- **Conclusion**: The car is maintaining a straight path.
+
+#### Step 5: Construction in the Road
+- **Observation**: There is no visible construction or roadwork in the video frame.
+- **Conclusion**: The road appears clear and free of construction.
+
+### Summary:
+- **Intersection**: No intersection encountered.
+- **Sudden Car Entry**: No sudden car entries observed.
+- **Tunnel**: No entry or exit from a tunnel.
+- **Turn**: The car is driving straight.
+- **Construction**: No construction present on the road.
+====================== 8 ======================
+=== /home/sunyujia/python_ws/OpenEMMA/test_data/under_construction/1725330495029858000.png ===
+### Step-by-Step Analysis of the Driving Scene:
+
+#### Step 1: Intersection Scene
+- **Observation**: The video does not show any intersections where the car would need to stop.
+- **Conclusion**: There is no intersection scene in the video.
+
+#### Step 2: Sudden Arrival of Other Cars
+- **Observation**: No other cars suddenly enter the road from the side or behind.
+- **Conclusion**: There are no sudden arrivals of other cars.
+
+#### Step 3: Tunnel Entry/Exit
+- **Observation**: The video does not show the car entering or exiting a tunnel.
+- **Conclusion**: The car does not drive into or leave a tunnel.
+
+#### Step 4: Turn in the Road
+- **Observation**: The car appears to be driving straight on a multi-lane road with clear lane markings.
+- **Conclusion**: The car does not show a turn in the road; it continues straight.
+
+#### Step 5: Construction in the Road
+- **Observation**: There are no visible signs of construction, such as barriers, detours, or warning signs, in the road ahead.
+- **Conclusion**: There is no construction in the road.
+
+### Summary:
+- **No intersections** were encountered.
+- **No sudden arrivals** of other cars were observed.
+- **No tunnel entry/exit** was seen.
+- **No turns** were made by the car.
+- **No construction** was present in the road.
+====================== 9 ======================
+=== /home/sunyujia/python_ws/OpenEMMA/test_data/under_construction/1725330497027986000.png ===
+### Step-by-Step Analysis of the Driving Scene:
+
+#### Step 1: Intersection Scene
+- **Observation**: The video does not show any intersections where the car would need to stop.
+- **Conclusion**: There is no intersection scene in the video.
+
+#### Step 2: Sudden Arrival of Other Cars
+- **Observation**: No other cars suddenly appear in front of the vehicle.
+- **Conclusion**: There are no sudden arrivals of other cars on the road.
+
+#### Step 3: Tunnel Entry/Exit
+- **Observation**: The video shows the car approaching a sign indicating a tunnel ahead.
+- **Conclusion**: The car is approaching a tunnel but has not yet entered it.
+
+#### Step 4: Turn in the Road
+- **Observation**: The car continues straight without making any turns.
+- **Conclusion**: The car does not make a turn in the road.
+
+#### Step 5: Construction on the Road
+- **Observation**: There are signs indicating construction ahead, with barriers and warning signs visible.
+- **Conclusion**: There is construction on the road, as indicated by the signs and barriers.
+
+### Summary:
+- **No intersections** were encountered.
+- **No sudden arrivals** of other cars were observed.
+- The car is approaching a **tunnel**, but it has not entered it yet.
+- The car is **not turning** at this moment.
+- There is **construction** on the road, as indicated by the signs and barriers.
+====================== 10 ======================
+=== /home/sunyujia/python_ws/OpenEMMA/test_data/under_construction/1725330499226736000.png ===
+### Step-by-Step Analysis of the Driving Scene:
+
+#### Step 1: Intersection Scene
+- **Intersection**: The video does not show an intersection where the car would need to stop.
+- **Car Movement**: The car is moving forward on a straight road.
+
+#### Step 2: Sudden Car Entry
+- **Sudden Car Entry**: There are no sudden cars entering from other roads. The road appears clear with minimal traffic.
+
+#### Step 3: Tunnel Entry/Exit
+- **Tunnel Entry/Exit**: The car is not entering or exiting a tunnel. It is on a straight road.
+
+#### Step 4: Turn in the Road
+- **Turn in the Road**: The car is not making a turn at this moment. It is maintaining a straight path.
+
+#### Step 5: Construction in the Road
+- **Construction**: There is visible construction activity on the right side of the road. There are barriers and construction equipment present, indicating ongoing work.
+
+### Summary:
+- The car is on a straight road without an intersection.
+- No sudden cars entered the road.
+- The car is not entering or exiting a tunnel.
+- The car is not turning at this moment.
+- There is construction activity on the right side of the road.
+====================== 11 ======================
+=== /home/sunyujia/python_ws/OpenEMMA/test_data/under_construction/1725330501225331000.png ===
+### Step-by-Step Analysis of the Driving Scene:
+
+#### Step 1: Intersection Scene
+The video does not depict an intersection where the car stops. The scene shows a continuous road with clear lane markings and no visible traffic signals that would indicate stopping at an intersection.
+
+#### Step 2: Sudden Arrival of Other Cars
+There is no indication of sudden arrival of other cars on the road. The video shows a steady flow of traffic, with vehicles maintaining a consistent speed and distance from each other.
+
+#### Step 3: Tunnel Entry/Exit
+The video does not show the car entering or exiting a tunnel. Instead, it appears to be on a straight road with no signs of a tunnel ahead.
+
+#### Step 4: Turn in the Road
+The car does not appear to make a turn in the road. It seems to be traveling straight along the highway.
+
+#### Step 5: Construction on the Road
+There is construction activity visible on the right side of the road. A yellow truck is parked near the barrier, and there are traffic cones and barriers set up, indicating ongoing work. However, the main lane the car is traveling in remains clear and unaffected by the construction.
+
+### Summary:
+- **Intersection Scene:** No.
+- **Sudden Arrival of Other Cars:** No.
+- **Tunnel Entry/Exit:** No.
+- **Turn in the Road:** No.
+- **Construction on the Road:** Yes, but the main lane is clear for the car to continue driving.
+====================== 12 ======================
+=== /home/sunyujia/python_ws/OpenEMMA/test_data/under_construction/1725330503423950000.png ===
+### Step-by-Step Analysis of the Driving Scene:
+
+#### Step 1: Intersection Scene
+- **Observation**: The video does not show any intersections where the car stops.
+- **Conclusion**: There is no intersection scene in the video.
+
+#### Step 2: Sudden Car Entry
+- **Observation**: No sudden car entries are observed from other roads.
+- **Conclusion**: There are no sudden car entries into the road.
+
+#### Step 3: Tunnel Entry/Exit
+- **Observation**: The car appears to be approaching and entering a tunnel.
+- **Conclusion**: The car is driving into a tunnel.
+
+#### Step 4: Turn in the Road
+- **Observation**: The car is moving straight on the road without any visible turns.
+- **Conclusion**: The car is not showing a turn in the road.
+
+#### Step 5: Construction in the Road
+- **Observation**: There are no visible signs of construction on the road. The road appears clear with standard lane markings and no barriers or detours.
+- **Conclusion**: There is no construction in the road.
+
+### Summary:
+- **Intersection Scene**: No.
+- **Sudden Car Entry**: No.
+- **Tunnel Entry/Exit**: Yes, the car is entering a tunnel.
+- **Turn in the Road**: No.
+- **Construction in the Road**: No.
+====================== 13 ======================
+=== /home/sunyujia/python_ws/OpenEMMA/test_data/under_construction/1725330508019954000.png ===
+### Step-by-Step Analysis of the Driving Scene:
+
+#### Step 1: Intersection Scene
+- **Observation**: The video does not show an intersection where the car stops.
+- **Conclusion**: There is no intersection scene in the video.
+
+#### Step 2: Sudden Arrival of Another Car
+- **Observation**: No other car suddenly drives into the road from another direction.
+- **Conclusion**: There is no sudden arrival of another car.
+
+#### Step 3: Entering or Exiting a Tunnel
+- **Observation**: The car enters a tunnel after passing through a sign that reads "虹梅南路隧道" (Hongmei South Road Tunnel).
+- **Conclusion**: The car enters a tunnel.
+
+#### Step 4: Turning in the Road
+- **Observation**: The car does not make any turns; it continues straight through the tunnel.
+- **Conclusion**: The car does not show a turn in the road.
+
+#### Step 5: Construction on the Road
+- **Observation**: There is no visible construction on the road. The surroundings appear to be clear with no signs of ongoing construction work.
+- **Conclusion**: There is no construction on the road.
+
+### Summary:
+- **Intersection Scene**: No.
+- **Sudden Arrival of Another Car**: No.
+- **Entering/Exiting a Tunnel**: Yes, entering a tunnel.
+- **Turning in the Road**: No.
+- **Construction on the Road**: No.
