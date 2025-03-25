@@ -36,7 +36,8 @@ class Tagger:
                 torch_dtype="auto", device_map="auto"
             )
         
-            self.processor = AutoProcessor.from_pretrained("unsloth/Qwen2.5-VL-7B-Instruct-unsloth-bnb-4bit")
+            self.processor = AutoProcessor.from_pretrained(
+                "unsloth/Qwen2.5-VL-7B-Instruct-unsloth-bnb-4bit")
     
         elif vlm == "7b":
             self.model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
@@ -45,7 +46,8 @@ class Tagger:
                 attn_implementation="flash_attention_2",
                 device_map="auto",
             )
-            self.processor = AutoProcessor.from_pretrained("Qwen/Qwen2.5-VL-7B-Instruct")
+            self.processor = AutoProcessor.from_pretrained(
+                "Qwen/Qwen2.5-VL-7B-Instruct")
 
         elif vlm == "3b":
             self.model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
@@ -55,7 +57,8 @@ class Tagger:
                 device_map="auto",
             )
 
-            self.processor = AutoProcessor.from_pretrained("Qwen/Qwen2.5-VL-3B-Instruct")
+            self.processor = AutoProcessor.from_pretrained(
+                "Qwen/Qwen2.5-VL-3B-Instruct")
             
         self.device = self.model.device
         self.max_token_gen = max_token_gen
