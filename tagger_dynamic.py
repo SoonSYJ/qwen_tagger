@@ -81,7 +81,10 @@ class Tagger:
                 {"role": "user", 
                 "content": [
                     {"type": "image", 
-                    "image": image},
+                    "image": image,
+                    "resized_height": 320,
+                    "resized_width": 800
+                    },
                     {"type": "text", 
                     "text": prompt}
                 ]}
@@ -119,22 +122,39 @@ class Tagger:
 
         return result
        
-    def get_tag_v(self, image, if_reasoning):
-        pre_prompt = "You have access to a video of a vehicle. "
-
-        prompt = f"You are an autonomous driving robot. " + \
+    def get_tag_v(self, image, video, if_reasoning):
+        if image is not None:
+            print("image tagging", image)
+            pre_prompt = "You have access to a camera image of a vehicle. "
+            prompt = f"You are an autonomous driving labeller. " + \
             f"{pre_prompt}" + \
             f"Describe the driving scene according to traffic lights, movements of other cars, buildings or pedestrians and lane markings. " + \
-            f"Answer the following questions step by step. " + \
-            f"step 1, any intersection scene in the video. Did the car stop? " + \
-            f"step 2, any car drive into our road suddently? " + \
-            f"step 3, did the car drive into a tunnel or leave a tunnel? " + \
-            f"step 4, did the car show a turn in the road? " + \
-            f"step 5, any contruction in the road? "            
+            f"Given a dictionary of road scene tags {tag_dict}. " + \
+            f"Select a value from the items according to each key of the dictionary. " + \
+            "Answer with a json file."
+            result_image = self.inference(text=prompt, image=image)
+        else:
+            result_image = "No image."
+        if video is not None:
+            video = [v[0] for v in video]
+            video.sort()
+            print("video tagging", video)
+            pre_prompt = "You have access to a video of a vehicle. "
+            prompt = f"You are an autonomous driving robot. " + \
+                f"{pre_prompt}" + \
+                f"Describe the driving scene according to traffic lights, movements of other cars, buildings or pedestrians and lane markings. " + \
+                f"Answer the following questions step by step. " + \
+                f"step 1, any intersection scene in the video. Did the car stop? " + \
+                f"step 2, any car drive into our road suddently? " + \
+                f"step 3, did the car drive into a tunnel or leave a tunnel? " + \
+                f"step 4, did the car show a turn in the road? " + \
+                f"step 5, any contruction in the road? "            
 
-        result = self.inference(text=prompt, image=image)
+            result_video = self.inference(text=prompt, image=video)
+        else:
+            result_video = "No video."
 
-        return result
+        return result_image, result_video
     
     def inference(self, text=None, image=None):
         message = self.get_message(text, image=image)
@@ -174,22 +194,24 @@ def run_gradio(tagger, host=None, port=None):
             """,
         fn=tagger.get_tag_v,
         inputs=[gr.Image(type="filepath"),
+                gr.Gallery(),
                 gr.Checkbox(value=True, label='推理模式')],
-        outputs=["text"],
+        outputs=["text", 
+                 "text"],
     )
     demo.launch(server_name="10.78.4.131", server_port=7860)
     
 if __name__ == "__main__":
     tagger = Tagger("7b")
     
-    # run_gradio(tagger)
+    run_gradio(tagger)
     
-    data_root = "/home/sunyujia/python_ws/adas_test_data/under_construction"
-    video_full = [os.path.join(data_root, p) for p in os.listdir(data_root)]
-    video_full.sort()
-    for i in range(len(video_full) // 10):
-        print(f"====================== {i} ======================")
-        videos = video_full[i*10:(i+1)*10]
-        print(f"=== {videos[0]} ===")
-        ans = tagger.get_tag_v(videos, False)
-        print(ans)
+    # data_root = "/home/sunyujia/python_ws/adas_test_data/under_construction"
+    # video_full = [os.path.join(data_root, p) for p in os.listdir(data_root)]
+    # video_full.sort()
+    # for i in range(len(video_full) // 10):
+    #     print(f"====================== {i} ======================")
+    #     videos = video_full[i*10:(i+1)*10]
+    #     print(f"=== {videos[0]} ===")
+    #     ans = tagger.get_tag_v(videos, False)
+    #     print(ans)
