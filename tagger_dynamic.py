@@ -92,39 +92,22 @@ class Tagger:
         
         return message
 
-    def get_tag(self, image, if_reasoning):
-        sence_l = list(tag_dict.keys())
-        if isinstance(image, (list, tuple)):
-            pre_prompt = "You have access to a video of a vehicle. "
+    def get_tag_v(self, image, video, usr_token, usr_prompt):
+        if usr_token is None:
+            return "请输入用户token", "请输入用户token"
         else:
-            pre_prompt = "You have access to a camera image of a vehicle. "
+            if usr_token not in ["syj1616"]:
+                return "用户token错误", "用户token错误"
             
-        if if_reasoning:
-            prompt = f"""You are an autonomous driving labeller. """ + \
-                f"""{pre_prompt}""" + \
-                f"""Describe the driving scene according to traffic lights, movements of other cars, buildings or pedestrians and lane markings. """ + \
-                f"""Answer the following questions step by step, strictly. And give a final description in the end. """ + \
-                f"""Step 1, select a value of time_of_day from the following list ({",".join(tag_dict[sence_l[0]])}). Explain why. And show the class name in this format #Class: time_of_day). """ + \
-                f"""Step 2, select a class from the following list ({",".join(tag_dict[sence_l[1]])}). """ + \
-                f"""Step 3, select a class from the following list ({",".join(tag_dict[sence_l[2]])}). """ + \
-                f"""Step 4, select a class from the following list ({",".join(tag_dict[sence_l[3]])}). """ + \
-                f"""Step 5, select a class from the following list ({",".join(tag_dict[sence_l[4]])}). """ + \
-                f"""Step 6, select a class from the following list ({",".join(tag_dict[sence_l[5]])}). """ + \
-                f"""Step 7, detect the surface of the road. Answer if the road show an obvious curvature or not. Ignore the position of the car. Select a class from the following list ({",".join(tag_dict[sence_l[6]])}). """
-        else:
-            prompt = f"You are an autonomous driving labeller. " + \
-            f"{pre_prompt}" + \
-            f"Describe the driving scene according to traffic lights, movements of other cars, buildings or pedestrians and lane markings. " + \
-            f"Given a dictionary of road scene tags {tag_dict}. " + \
-            f"Select a value from the items according to each key of the dictionary. " + \
-            "Answer with a json file."
-        result = self.inference(text=prompt, image=image)
-
-        return result
-       
-    def get_tag_v(self, image, video, if_reasoning):
+        hist_root = os.path.join("/home/sunyujia/python_ws/qwen_tagger/infer_hist", usr_token)
+        if not os.path.exists(hist_root):
+            os.makedirs(hist_root)
+        
+        hist = [usr_token, usr_prompt]
+        # user available
         if image is not None:
             print("image tagging", image)
+            hist.append(image)
             pre_prompt = "You have access to a camera image of a vehicle. "
             prompt = f"You are an autonomous driving labeller. " + \
             f"{pre_prompt}" + \
@@ -132,12 +115,19 @@ class Tagger:
             f"Given a dictionary of road scene tags {tag_dict}. " + \
             f"Select a value from the items according to each key of the dictionary. " + \
             "Answer with a json file."
+            
+            if usr_prompt:
+                # replace system prompt with user prompt
+                prompt = usr_prompt
             result_image = self.inference(text=prompt, image=image)
+            hist.append(result_image)
         else:
             result_image = "No image."
         if video is not None:
             video = [v[0] for v in video]
             video.sort()
+            for p in video:
+                hist.append(p)
             print("video tagging", video)
             pre_prompt = "You have access to a video of a vehicle. "
             prompt = f"You are an autonomous driving robot. " + \
@@ -150,10 +140,17 @@ class Tagger:
                 f"step 4, did the car show a turn in the road? " + \
                 f"step 5, any contruction in the road? "            
 
+            if usr_prompt:
+                # replace system prompt with user prompt
+                prompt = usr_prompt
             result_video = self.inference(text=prompt, image=video)
+            hist.append(result_video)
         else:
             result_video = "No video."
-
+      
+        with open(os.path.join(hist_root, f"{usr_token}_{time.strftime('%Y%m%d%H%M%S')}.txt"), "w") as f:
+            f.write("\n".join(hist))
+            
         return result_image, result_video
     
     def inference(self, text=None, image=None):
@@ -183,21 +180,17 @@ def run_gradio(tagger, host=None, port=None):
     sence_l = list(tag_dict.keys())
     demo = gr.Interface(
         description=f"""
-            # 标签自动化
-            第一级，从（{",".join(tag_dict[sence_l[0]])}）中选择一个标签。\n
-            第二级，从（{",".join(tag_dict[sence_l[1]])}）中选择一个标签。\n
-            第三级，从（{",".join(tag_dict[sence_l[2]])}）中选择一个或多个标签。\n
-            第四级，从（{",".join(tag_dict[sence_l[3]])}）中选择一个或多个标签。\n
-            第五级，从（{",".join(tag_dict[sence_l[4]])}）中选择一个或多个标签，没有则输出无。\n
-            第六级，从（{",".join(tag_dict[sence_l[5]])}）中选择一个或多个标签，没有则输出无。\n
-            第七级，根据可行驶区域的弯曲情况判断是否是弯道。
+            # 视觉语言大模型应用  🌈动-静态场景理解🌈
+            1️⃣ 静态场景理解：输入单帧图像，大模型返回静态场景描述 \n
+            2️⃣ 动态场景理解：输入连续帧图像，大模型返回动态场景描述
             """,
         fn=tagger.get_tag_v,
-        inputs=[gr.Image(type="filepath"),
-                gr.Gallery(),
-                gr.Checkbox(value=True, label='推理模式')],
-        outputs=["text", 
-                 "text"],
+        inputs=[gr.Image(type="filepath", label="单帧图像"),
+                gr.Gallery(label="连续帧图像"),
+                gr.Textbox(label="用户token"),
+                gr.Textbox("你是一个智能驾驶机器人。输入是一段道路行驶的视频。请描述视频中车辆和行人情况，交通信号灯情况，车道线情况，交通标志牌情况。", label="用户提示词", type="text")],
+        outputs=[gr.Textbox(label="静态场景理解", type="text", lines=10), 
+                 gr.Textbox(label="动态场景理解", type="text", lines=10)],
     )
     demo.launch(server_name="10.78.4.131", server_port=7860)
     
