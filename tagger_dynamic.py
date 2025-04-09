@@ -60,21 +60,6 @@ class Tagger:
             self.processor = AutoProcessor.from_pretrained(
                 "Qwen/Qwen2.5-VL-3B-Instruct")
             
-        # elif vlm == "minicpm_o_26"
-        #     model = AutoModel.from_pretrained(
-        #         'OpenBMB/MiniCPM-o-2_6',
-        #         trust_remote_code=True,
-        #         attn_implementation='sdpa', # sdpa or flash_attention_2
-        #         torch_dtype=torch.bfloat16,
-        #         init_vision=True,
-        #         init_audio=True,
-        #         init_tts=True
-        #     )
-
-
-        #     model = model.eval().cuda()
-        #     tokenizer = AutoTokenizer.from_pretrained('OpenBMB/MiniCPM-o-2_6', trust_remote_code=True)
-        
         self.device = self.model.device
         self.max_token_gen = max_token_gen
     

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fawai_tagger"
+version = "0.0.2"
+dependencies = [
+  "qwen_vl_utils >= 0.0.10",
+  "vllm >= 0.8.0",
+  "transformers >= 4.51.0"
+]
+authors = [
+  { name="sunyujia", email="sunyujia1@faw.com.cn" },
+]
+description = "A package for AD scene tagging by fawai"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/SoonSYJ/qwen_tagger"
