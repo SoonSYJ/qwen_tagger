@@ -60,6 +60,21 @@ class Tagger:
             self.processor = AutoProcessor.from_pretrained(
                 "Qwen/Qwen2.5-VL-3B-Instruct")
             
+        # elif vlm == "minicpm_o_26"
+        #     model = AutoModel.from_pretrained(
+        #         'OpenBMB/MiniCPM-o-2_6',
+        #         trust_remote_code=True,
+        #         attn_implementation='sdpa', # sdpa or flash_attention_2
+        #         torch_dtype=torch.bfloat16,
+        #         init_vision=True,
+        #         init_audio=True,
+        #         init_tts=True
+        #     )
+
+
+        #     model = model.eval().cuda()
+        #     tokenizer = AutoTokenizer.from_pretrained('OpenBMB/MiniCPM-o-2_6', trust_remote_code=True)
+        
         self.device = self.model.device
         self.max_token_gen = max_token_gen
     
@@ -195,7 +210,7 @@ def run_gradio(tagger, host=None, port=None):
     demo.launch(server_name="10.78.4.131", server_port=7860)
     
 if __name__ == "__main__":
-    tagger = Tagger("7b")
+    tagger = Tagger("3b")
     
     run_gradio(tagger)
     
